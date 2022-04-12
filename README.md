@@ -27,7 +27,6 @@ Docker documentation: <https://docs.docker.com/>
 - download a video: `docker run --rm -v $(pwd):/media youtube-dl https://www.youtube.com/watch?v=JYwUUDdYi9I`
 
 Create shortcut & execute command as,
-
 ```
 alias yt-dl='docker run \
                   --rm -i \
@@ -36,6 +35,8 @@ alias yt-dl='docker run \
                   -v "$(pwd)":/media:rw \
                   youtube-dl:latest'
 ```
+- list youtube-dl options: `yt-dl --help`
+
 To download 1080p run the following command,
 ```
 yt-dl -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' --merge-output-format mp4 <YOUTUBE_URL_LINK>
